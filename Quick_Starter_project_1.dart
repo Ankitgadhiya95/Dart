@@ -29,56 +29,56 @@ void main() {
                   TextSpan(
                     text: "🍇 Greps\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.green,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🍒 Cherry\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.deepPurpleAccent,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🍓 Strawberry\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.pinkAccent,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🥭 Mango\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.yellow,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🍍 Pineapple\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.lightGreenAccent,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🍋 Lemon\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.yellowAccent,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🍉 Watermelon\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.lightGreen,
                       fontSize: 39,
                     ),
                   ),
                   TextSpan(
                     text: "🥥 Coconut\n",
                     style: TextStyle(
-                      color: Colors.red,
+                      color: Colors.brown,
                       fontSize: 39,
                     ),
                   ),
