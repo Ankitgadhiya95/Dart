@@ -96,7 +96,7 @@ void main() {
 
 
 Task__2--->
-  import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -118,7 +118,7 @@ void main() {
               child: RichText(
                 text: const TextSpan(children: <TextSpan>[
                   TextSpan(
-                    text: "G",
+                    text: "             G",
                     style: TextStyle(
                       color: Colors.green,
                       fontSize: 28,
@@ -142,7 +142,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nFLUTT",
+                    text: "\n    FLUTT",
                     style: TextStyle(
                       color: Colors.lightBlue,
                       fontSize: 28,
@@ -166,7 +166,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nAN",
+                    text: "\n          AN",
                     style: TextStyle(
                       color: Colors.green,
                       fontSize: 28,
@@ -214,7 +214,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nW",
+                    text: "\n           W",
                     style: TextStyle(
                       color: Colors.red,
                       fontSize: 36,
@@ -230,7 +230,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nFAS",
+                    text: "\n        FAS",
                     style: TextStyle(
                       color: Colors.yellowAccent,
                       fontSize: 28,
@@ -254,7 +254,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nANIMAT",
+                    text: "\n ANIMAT",
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontSize: 28,
@@ -278,7 +278,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nI",
+                    text: "\n              I",
                     style: TextStyle(
                       color: Colors.blueAccent,
                       fontSize: 28,
@@ -302,7 +302,7 @@ void main() {
                     ),
                   ),
                   TextSpan(
-                    text: "\nGAM",
+                    text: "\n      GAM",
                     style: TextStyle(
                       color: Colors.limeAccent,
                       fontSize: 28,
