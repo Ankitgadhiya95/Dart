@@ -92,3 +92,78 @@ void main() {
     ),
   ));
 }
+
+
+Task__3--->
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.red,
+            title: Text("Mix-up"),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 450,
+              height: 400,
+              decoration: BoxDecoration(
+                color: Color(0XFF2196F3),
+              ),
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  width: 350,
+                  height: 350,
+                  color: Color(0XFFFFFF00),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
+                    child: Container(
+                      width: 310,
+                      height: 300,
+                      color: Color(0XFFE91E63),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Container(
+                          width: 260,
+                          height: 250,
+                          color: Color(0XFFFF9800),
+                          child: Align(
+                            alignment: Alignment.topLeft,
+                            child: Container(
+                              width: 210,
+                              height: 200,
+                              color: Color(0XFF4CAF50),
+                              child: Align(
+                                alignment: Alignment.center,
+                                child: Container(
+                                  width: 160,
+                                  height: 150,
+                                  color: Color(0XFF64FFDA),
+
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
