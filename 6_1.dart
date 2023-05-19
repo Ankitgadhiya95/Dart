@@ -167,3 +167,44 @@ void main() {
   );
 }
 
+
+
+Task__4--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.red,
+            title: Text("Mix-up"),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 100,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Color(0XFF795548),
+                border: Border(
+                  right: BorderSide(width: 25, color: Colors.white),
+                  left: BorderSide(width: 25, color: Colors.white),
+                  top: BorderSide(width: 15, color: Color(0XFF87665B)),
+                  bottom: BorderSide(width: 15, color: Color(0XFF87665B)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
