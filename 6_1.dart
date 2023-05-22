@@ -214,3 +214,48 @@ void main() {
     ),
   );
 }
+
+
+
+Task__5--->
+  
+    
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF4CAF50),
+            title: Text(
+              "Letter Cover",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 190,
+              height: 190,
+              decoration: const BoxDecoration(
+                color: Color(0XFF4CAF50),
+                border: Border(
+                  right: BorderSide(width: 80, color: Color(0XFF4CAF50)),
+                  left: BorderSide(width: 80, color: Color(0XFF4CAF50)),
+                  top: BorderSide(width: 80, color: Color(0XFF72C075)),
+                  bottom: BorderSide(width: 80, color: Color(0XFF72C075)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
