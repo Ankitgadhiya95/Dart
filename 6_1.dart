@@ -302,3 +302,46 @@ void main() {
   );
 }
 
+
+Task__7--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF000000),
+            title: Text(
+              "Opened Doors",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 190,
+              height: 190,
+              decoration: const BoxDecoration(
+                color: Color(0XFF000000),
+                border: Border(
+                  right: BorderSide(width: 60, color: Color(0XFFEEEEEE)),
+                  left: BorderSide(width: 60, color: Color(0XFFEEEEEE)),
+                  top: BorderSide(width: 30, color: Color(0XFF000000)),
+                  bottom: BorderSide(width: 30, color: Color(0XFF000000)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
