@@ -259,3 +259,46 @@ void main() {
   );
 }
 
+
+Task__6--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF009688),
+            title: Text(
+              "3D Cube",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 190,
+              height: 190,
+              decoration: const BoxDecoration(
+                color: Color(0XFF009688),
+                border: Border(
+                  right: BorderSide(width: 30, color: Color(0XFF33ABA0)),
+                  left: BorderSide(width: 30, color: Color(0XFF33ABA0)),
+                  top: BorderSide(width: 25, color: Color(0XFF4DB6AC)),
+                  bottom: BorderSide(width: 25, color: Color(0XFF4DB6AC)),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
