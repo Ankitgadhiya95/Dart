@@ -172,7 +172,7 @@ void main() {
 Task__4--->
   
   
-  import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -191,7 +191,7 @@ void main() {
             child: Container(
               width: 100,
               height: 150,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0XFF795548),
                 border: Border(
                   right: BorderSide(width: 25, color: Colors.white),
@@ -202,9 +202,15 @@ void main() {
               ),
             ),
           ),
+          floatingActionButton: Align(
+            child: Text(
+              "🔥",
+              style: TextStyle(fontSize: 50),
+            ),
+            alignment: Alignment(0.09, -0.18),
+          ),
         ),
       ),
     ),
   );
 }
-
