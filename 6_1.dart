@@ -345,3 +345,68 @@ void main() {
   );
 }
 
+
+Task__8--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          bottomNavigationBar: SizedBox(
+            height: 50,
+            child: AppBar(
+              centerTitle: true,
+              backgroundColor: Color(0XFFFF9800),
+              title: Text(
+                "Emoji",
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          body: Center(
+            child: Container(
+              width: 290,
+              height: 290,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  width: 30,
+                  color: Color(0XFFFF9800),
+                ),
+              ),
+            ),
+          ),
+          floatingActionButton: Align(
+            alignment: Alignment(0.17, 0.07),
+            child: Container(
+              width: 230,
+              height: 230,
+              child: Text("●●",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 150, color: Colors.white)),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0XFFFF9800),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.white,
+                      offset: Offset(0.19, 0.05),
+                    )
+                  ]),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+
