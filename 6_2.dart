@@ -44,3 +44,55 @@ void main() {
     ),
   );
 }
+
+
+
+Task__2--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.red,
+            title: Text(
+              "Dark Shadow Button",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Colors.black,
+          body: Center(
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Tap",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+              ),
+              width: 280,
+              height: 80,
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.red, blurRadius: 40, spreadRadius: 7),
+                  ],
+                  borderRadius: BorderRadius.circular(20),
+                  shape: BoxShape.rectangle,
+                  color: Color(0XFF000000),
+                  border: Border.all(color: Colors.red, width: 0.5)),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
