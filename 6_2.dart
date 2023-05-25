@@ -255,3 +255,67 @@ void main() {
   );
 }
 
+Task__6--->
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            //centerTitle: true,
+            backgroundColor: Color(0XFF48416A),
+            title: Text(
+              "Watch",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Color(0XFF2886E5),
+          body: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [Color(0XFF464068), Color(0XFF2195F2)])),
+            child: Center(
+              child: Container(
+                child: Center(
+                  child: Text(
+                    "Flutter",
+                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  ),
+                ),
+                width: 220,
+                height: 80,
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          offset: Offset(6, 10),
+                          color: Colors.black38,
+                          blurRadius: 20)
+                    ],
+                    borderRadius: BorderRadius.circular(35),
+                    shape: BoxShape.rectangle,
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      colors: [
+                        Color(0XFF416DA1),
+                        Color(0XFF4E7BAF),
+                      ],
+                    ),
+                    border: Border.all(color: Color(0XFF4F76AA), width: 1.5)),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
