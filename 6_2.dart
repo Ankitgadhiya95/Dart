@@ -205,3 +205,53 @@ void main() {
   );
 }
 
+
+Task__5--->
+  
+  
+  
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF2196F3),
+            title: Text(
+              "An Indian Flag",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),backgroundColor: Color(0XFF2886E5),
+          body: Center(
+            child: Container(
+              child: Center(
+                child: Text(
+                  "✴",
+                  style: TextStyle(color: Color(0XFF00008B), fontSize: 80),
+                ),
+              ),
+              width: 250,
+              height: 180,
+              decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,stops:[0.2,0.6,0.8],
+                  colors:[
+                    Color(0XFFFF5722),Color(0XFFffffff),Color(0XFF388E3C)
+                  ],),
+                  border: Border.all(color: Colors.white, width: 1.5)),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
