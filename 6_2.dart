@@ -96,3 +96,58 @@ void main() {
   );
 }
 
+
+
+
+Task__3--->
+  
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF009688),
+            title: Text(
+              "A Shadow Button",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          body: Center(
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Tap",
+                  style: TextStyle(color: Colors.black, fontSize: 30),
+                ),
+              ),
+              width: 220,
+              height: 80,
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Color(0XFF009688),
+                        blurRadius: 40,
+                        spreadRadius: 7),
+                  ],
+                  borderRadius: BorderRadius.circular(20),
+                  shape: BoxShape.rectangle,
+                  color: Colors.white,
+                  border: Border.all(color: Color(0XFF009688), width: 0.5)),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+
