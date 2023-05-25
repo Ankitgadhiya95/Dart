@@ -87,7 +87,7 @@ void main() {
                   borderRadius: BorderRadius.circular(20),
                   shape: BoxShape.rectangle,
                   color: Color(0XFF000000),
-                  border: Border.all(color: Colors.red, width: 0.5)),
+                  border: Border.all(color: Colors.red, width: 1.5)),
             ),
           ),
         ),
@@ -141,7 +141,7 @@ void main() {
                   borderRadius: BorderRadius.circular(20),
                   shape: BoxShape.rectangle,
                   color: Colors.white,
-                  border: Border.all(color: Color(0XFF009688), width: 0.5)),
+                  border: Border.all(color: Color(0XFF009688), width: 1.5)),
             ),
           ),
         ),
@@ -150,4 +150,58 @@ void main() {
   );
 }
 
+
+
+Task__4--->
+  
+  
+  
+  
+  import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Color(0XFF48416A),
+            title: Text(
+              "Gredient Button",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
+          backgroundColor: Color(0XFF48416A),
+          body: Center(
+            child: Container(
+              child: Center(
+                child: Text(
+                  "Flutter",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+              ),
+              width: 240,
+              height: 90,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(45),
+                shape: BoxShape.rectangle,
+                gradient: LinearGradient(
+                  colors: [
+                    Color(0XFF9A29B1),
+                    Color(0XFF2294F2),
+                  ],
+                ),
+                border: Border.all(color: Colors.white, width: 1.5),
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
 
