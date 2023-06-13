@@ -34,7 +34,7 @@ void main() {
                         fontWeight: FontWeight.w700),
                   ),
                   TextSpan(
-                    text: "Shaping 'skills' for 'scaling' higher...!!!",
+                    text: 'Shaping "skills" for "scaling" higher...!!!',
                     style: TextStyle(
                         color: Colors.red,
                         fontSize: 20,
