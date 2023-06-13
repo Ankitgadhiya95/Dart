@@ -19,3 +19,20 @@ print(b);
 
 
 
+
+Task__2-->
+ import 'dart:io';
+
+void main() {
+  List a = [];
+  print("enter the size :");
+  int number = int.parse(stdin.readLineSync()!);
+  print("Enter name :");
+  int i;
+  for (i = 1; i <= number; i++) {
+    String name = stdin.readLineSync()!;
+    a.add(name);
+  }
+
+  print(a);
+}
