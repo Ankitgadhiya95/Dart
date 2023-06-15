@@ -38,3 +38,25 @@ void main() {
     print("SALARY ${newmap[i]["salary"]}");
   }
 }
+
+
+
+Task--2
+  
+  
+import 'dart:io';
+
+void main() {
+  print("Enter the size of list ");
+  var size;
+  size = int.parse(stdin.readLineSync()!);
+  List<String> l1 = [];
+  for (var i = 0; i < size; i++) {
+    print("Enter the Data $i Index");
+    var value;
+    value = stdin.readLineSync()!;
+    l1.add(value);
+  }
+  Set newset = l1.toSet();
+  print(newset);
+}
