@@ -1,3 +1,43 @@
+Dart
+
+Task--1 
+
+
+
+
+
+
+
+Task--2 
+  
+  import 'dart:io';
+
+void main() {
+  int size;
+  List<int> newlist = [];
+  print("Enter the size of Array");
+  size = int.parse(stdin.readLineSync()!);
+  print("Enter the Data");
+  for (int i = 0; i < size; i++) {
+    newlist.add(int.parse(stdin.readLineSync()!));
+  }
+  print("Maximum of Array List is :");
+  newlist.sort();
+  print(newlist[size - 1]);
+}
+
+
+Task--3
+  
+  
+
+
+
+
+
+--------------------------------------------------------------
+  Flutter program 
+
 Task__1--->
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
