@@ -77,6 +77,53 @@ void main() {
 
 Task--4
   
+  import 'dart:io';
+
+void main() {
+  var list = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ];
+  var list1 = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ];
+  var sum = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+  ];
+
+  print("Enter the First Matrix Data:");
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      print("Enter $i and $j Position Value :\n");
+      list[i][j] = int.parse(stdin.readLineSync()!);
+    }
+  }
+
+  print("\nEnter the Second Matrix Data:");
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      print("Enter $i and $j Position Value :\n");
+      list1[i][j] = int.parse(stdin.readLineSync()!);
+    }
+  }
+  var x;
+  print("\nSum of Matric is:");
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      x = List.generate(
+          3, (i) => List.generate(3, (j) => list[i][j] + list1[i][j]));
+    }
+  }
+  print(x);
+}
+
+Task--5
+  
   
 
 
