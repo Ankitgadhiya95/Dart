@@ -28,6 +28,54 @@ void main() {
 
 
 Task--3
+
+  import 'dart:io';
+
+void main() {
+  int size, choice = 0, addvalue, deletevalue;
+  List<int> newlist = [];
+  print("Enter the size of Array");
+  size = int.parse(stdin.readLineSync()!);
+  print("Enter the Data");
+  for (int i = 0; i < size; i++) {
+    newlist.add(int.parse(stdin.readLineSync()!));
+  }
+
+  while (choice <= 5) {
+    print("1.insert\n2.Delete\n3.Update \n4.Display\n5.Exit");
+    print("Enter Your Choice!");
+    choice = int.parse(stdin.readLineSync()!);
+    switch (choice) {
+      case 1:
+        print("Enter the Data You Want to Add");
+        addvalue = int.parse(stdin.readLineSync()!);
+        newlist.add(addvalue);
+        break;
+      case 2:
+        print("Which Element you Want to Delete");
+
+        deletevalue = int.parse(stdin.readLineSync()!);
+        newlist.remove(deletevalue);
+        break;
+      case 3:
+        print("Enter the Element Index to Want to Update");
+
+        var indexvalue = int.parse(stdin.readLineSync()!);
+        print("Enter the Data You Want to Update");
+        var updatevalue = int.parse(stdin.readLineSync()!);
+        newlist[indexvalue] = updatevalue;
+        break;
+
+      case 4:
+        print(newlist);
+        break;
+      case 5:
+        exit(0);
+    }
+  }
+}
+
+Task--4
   
   
 
