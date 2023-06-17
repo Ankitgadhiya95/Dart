@@ -24,6 +24,7 @@ newlist.forEach((element) {
 }
 
 
+
 Task--2 
   
   import 'dart:io';
@@ -41,6 +42,8 @@ void main() {
   newlist.sort();
   print(newlist[size - 1]);
 }
+
+
 
 
 Task--3
@@ -91,6 +94,8 @@ void main() {
   }
 }
 
+
+
 Task--4
   
   import 'dart:io';
@@ -138,7 +143,103 @@ void main() {
   print(x);
 }
 
+
+
 Task--5
+  
+  
+  import 'dart:io';
+
+void main() {
+  var list = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+      ],
+      choice = 0,
+      sum = 0,
+      row = 0,
+      rowsum = 0,
+      column = 0,
+      columnsum = 0,
+      sumanti = 0,
+      sumdia = 0;
+
+  print("Enter the  Matrix Data:");
+  for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+      print("Enter $i and $j Position Value :\n");
+      list[i][j] = int.parse(stdin.readLineSync()!);
+    }
+  }
+  print(
+      " 1.Sum of all elements \n 2.sum of specific row \n 3.sum of specific column \n 4.sum diagonal elements \n 5.sum of antidiagonal elements \n 6.Press for exit");
+  print("Enter Your Choice !");
+  choice = int.parse(stdin.readLineSync()!);
+  switch (choice) {
+    case 1:
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+          sum += list[i][j];
+        }
+      }
+      print("Sum of All Elements : $sum");
+
+      break;
+    case 2:
+      print("Enter the Specific Row");
+      row = int.parse(stdin.readLineSync()!);
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+          if (i == row) {
+            rowsum += list[i][j];
+          }
+        }
+      }
+      print("sum fo $row is $rowsum");
+      break;
+
+    case 3:
+      print("Enter the Specific Column");
+      column = int.parse(stdin.readLineSync()!);
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+          if (j == column) {
+            columnsum += list[i][j];
+          }
+        }
+      }
+
+      print("sum fo $column is $columnsum");
+      break;
+    case 4:
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+          if (i == j) {
+            sumdia += list[i][j];
+          }
+        }
+      }
+
+      print("sum fo Diagonal is $sumdia");
+      break;
+    case 5:
+      for (int i = 2; i >= 0; i--) {
+        for (int j = 2; j >= 0; j--) {
+          if (i == j) {
+            sumanti += list[i][j];
+          }
+        }
+      }
+
+      print("sum fo AntiDiagonal is $sumanti");
+      break;
+    default:
+      print("Enter valid choice and Try again Later");
+      exit(0);
+  }
+}
+
   
   
 
