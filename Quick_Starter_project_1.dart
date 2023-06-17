@@ -1,11 +1,27 @@
 Dart
 
 Task--1 
-
-
-
-
-
+  
+  import 'dart:io';
+void main()
+{
+  int size;
+  List <int> newlist=[];
+  print("Enter the Num");
+  size=int.parse(stdin.readLineSync()!);
+  print("Enter Data");
+  for(int i=0;i<size;i++)
+  {
+newlist.add(int.parse(stdin.readLineSync()!));
+  }
+  print("Negative Num is: ");
+newlist.forEach((element) {
+  if(element<0)
+  {
+    print(element);
+  }
+});
+}
 
 
 Task--2 
