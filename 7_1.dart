@@ -62,7 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
                 '$_counter',
@@ -73,58 +72,72 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        height: 50,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Color(0XFF54759E),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            _counter = _counter - 2;
+                          });
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color(0XFF54759E),
+                          ),
+                          child: Center(
+                              child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.remove,
+                                size: 35,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                '2',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          )),
                         ),
-                        child: Center(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.remove,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              '2',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600),
-                            )
-                          ],
-                        )),
                       ),
                       SizedBox(
                         width: 20,
                       ),
-                      Container(
-                        height: 50,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Color(0XFF54759E),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.add,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              '2',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600),
-                            )
-                          ],
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            _counter = _counter + 2;
+                          });
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color(0XFF54759E),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.add,
+                                size: 35,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                '2',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ],
@@ -135,18 +148,59 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            _counter = _counter - 4;
+                          });
+                        },
+                        child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Color(0XFF54759E),
+                            ),
+                            height: 50,
+                            width: 120,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.remove,
+                                  size: 35,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  '4',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.w600),
+                                )
+                              ],
+                            )),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            _counter = _counter + 4;
+                          });
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: Color(0XFF54759E),
                           ),
-                          height: 50,
-                          width: 120,
-                          child: Row(
+                          child: Center(
+                              child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(
-                                Icons.remove,
+                                Icons.add,
                                 size: 35,
                                 color: Colors.white,
                               ),
@@ -159,34 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               )
                             ],
                           )),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                        height: 50,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Color(0XFF54759E),
                         ),
-                        child: Center(
-                            child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.add,
-                              size: 35,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              '4',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.w600),
-                            )
-                          ],
-                        )),
                       ),
                     ],
                   ),
@@ -195,19 +222,26 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 20),
               Column(
                 children: [
-                  Container(
-                    height: 50,
-                    width: 120,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Color(0XFF54759E),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Clear",
-                        style: TextStyle(
-                          fontSize: 30,
-                          color: Colors.white,
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        _counter = 0;
+                      });
+                    },
+                    child: Container(
+                      height: 50,
+                      width: 120,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color(0XFF54759E),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Clear",
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
