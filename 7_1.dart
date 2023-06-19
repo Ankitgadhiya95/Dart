@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-   @override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -48,7 +48,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          // backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           backgroundColor: Color(0XFF54759E),
           title: Text(
             'Calc',
@@ -82,10 +81,22 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Color(0XFF54759E),
                         ),
                         child: Center(
-                            child: Icon(
-                          Icons.exposure_minus_2_rounded,
-                          size: 35,
-                          color: Colors.white,
+                            child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.remove,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              '2',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w600),
+                            )
+                          ],
                         )),
                       ),
                       SizedBox(
@@ -98,12 +109,23 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(5),
                           color: Color(0XFF54759E),
                         ),
-                        child: Center(
-                            child: Icon(
-                          Icons.exposure_minus_2_rounded,
-                          size: 35,
-                          color: Colors.white,
-                        )),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.add,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              '2',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w600),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -114,19 +136,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: Color(0XFF54759E),
-                        ),
-                        height: 50,
-                        width: 120,
-                        child: Center(
-                            child: Icon(
-                          Icons.exposure_minus_2_rounded,
-                          size: 35,
-                          color: Colors.white,
-                        )),
-                      ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: Color(0XFF54759E),
+                          ),
+                          height: 50,
+                          width: 120,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.remove,
+                                size: 35,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                '4',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.w600),
+                              )
+                            ],
+                          )),
                       SizedBox(
                         width: 20,
                       ),
@@ -138,10 +170,22 @@ class _MyHomePageState extends State<MyHomePage> {
                           color: Color(0XFF54759E),
                         ),
                         child: Center(
-                            child: Icon(
-                          Icons.exposure_minus_2_rounded,
-                          size: 35,
-                          color: Colors.white,
+                            child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.add,
+                              size: 35,
+                              color: Colors.white,
+                            ),
+                            Text(
+                              '4',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w600),
+                            )
+                          ],
                         )),
                       ),
                     ],
@@ -177,7 +221,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
 
 
 
