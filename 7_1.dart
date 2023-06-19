@@ -357,3 +357,273 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+
+Task--3
+  
+  import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(
+        title: 'Icons',
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  List mapList = [
+    Icons.add,
+    Icons.album,
+    Icons.arrow_back_ios_new,
+    Icons.arrow_forward_ios,
+    Icons.access_alarm,
+  ];
+
+  List map1List = [
+    Icons.verified_user_sharp,
+    Icons.account_circle_outlined,
+    Icons.loop,
+    Icons.shuffle,
+  ];
+  List map2List = [
+    Icons.more,
+    Icons.more_vert,
+    Icons.height,
+  ];
+  List map3List = [
+    Icons.phone,
+    Icons.search,
+    Icons.details,
+    Icons.stop,
+    Icons.play_arrow,
+  ];
+  List map4List = [
+    Icons.apps,
+    Icons.workspaces_outlined,
+    Icons.wifi_lock,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0XFFFFFFFF),
+        appBar: AppBar(
+          backgroundColor: const Color(0XFFFFFFFF),
+          elevation: 3,
+          title: const Text(
+            'Icons',
+            style: TextStyle(color: Color(0XFF737373)),
+          ),
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i in mapList)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 15.0, left: 8, right: 8, top: 8),
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF5F5F5),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    offset: Offset(0.0, 15)),
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Icon(
+                              i,
+                              size: 40,
+                              color: Color(0XFF616161),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i in map1List)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 15.0, left: 8, right: 8, top: 8),
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF5F5F5),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    offset: Offset(0.0, 15)),
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Icon(
+                              i,
+                              size: 40,
+                              color: Color(0XFF616161),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i in map2List)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 15.0, left: 8, right: 8, top: 8),
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF5F5F5),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    offset: Offset(0.0, 15)),
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Icon(
+                              i,
+                              size: 40,
+                              color: Color(0XFF616161),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i in map3List)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 15.0, left: 8, right: 8, top: 8),
+                          child: Container(
+                            height: 120,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF5F5F5),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    offset: Offset(0.0, 15)),
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Icon(
+                              i,
+                              size: 40,
+                              color: Color(0XFF616161),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      for (var i in map4List)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              bottom: 15.0, left: 8, right: 8, top: 8),
+                          child: Container(
+                            height: 125,
+                            width: 125,
+                            decoration: BoxDecoration(
+                              color: Color(0XFFF5F5F5),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 2,
+                                    blurRadius: 10,
+                                    offset: Offset(0, 15)),
+                              ],
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Icon(
+                              i,
+                              size: 40,
+                              color: Color(0XFF616161),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
