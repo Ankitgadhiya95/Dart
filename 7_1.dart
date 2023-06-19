@@ -261,7 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Task--2 
   
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -295,6 +295,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List mapList = [
+    {'title': 'Exit', 'icon': Icon(Icons.exit_to_app)},
+    {'title': 'Pause', 'icon': Icon(Icons.play_arrow)},
+    {'title': 'Pause', 'icon': Icon(Icons.pause)},
+    {'title': 'Stop', 'icon': Icon(Icons.stop)},
+    {'title': 'Close', 'icon': Icon(Icons.close)},
+    {'title': 'Delete', 'icon': Icon(Icons.delete)},
+    {'title': 'Email', 'icon': Icon(Icons.email)},
+  ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -312,220 +321,35 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           centerTitle: true,
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        margin: EdgeInsets.zero,
-                        padding: const EdgeInsets.only(
-                          left: 20,
-                        ),
-                        height: 80,
-                        width: 390,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          color: const Color(0XFFFFFFFF),
-                        ),
-                        child: const Row(
-                          children: [
-                            Center(
-                              child: Text(
-                                "Exit",
-                                style: TextStyle(fontSize: 20),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 285, right: 20),
-                              child: Icon(
-                                Icons.exit_to_app,
-                                size: 30,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                    ),
-                    height: 80,
-                    width: 390,
+            children: mapList
+                .map(
+                  (e) => Container(
+                    height: 82,
+                    margin: EdgeInsets.only(bottom: 10, top: 10),
+                    width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       color: const Color(0XFFFFFFFF),
                     ),
-                    child: const Row(
-                      children: [
-                        Center(
-                          child: Text("Play", style: TextStyle(fontSize: 20)),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 278, right: 20),
-                          child: Icon(
-                            Icons.play_arrow,
-                            size: 30,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            e['title'],
+                            style: TextStyle(fontSize: 22),
                           ),
-                        ),
-                      ],
+                          e['icon']
+                        ],
+                      ),
                     ),
                   ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                ),
-                height: 80,
-                width: 390,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0XFFFFFFFF),
-                ),
-                child: const Row(
-                  children: [
-                    Center(
-                      child: Text("Pause", style: TextStyle(fontSize: 20)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 263, right: 20),
-                      child: Icon(
-                        Icons.pause,
-                        size: 30,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                ),
-                height: 80,
-                width: 390,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0XFFFFFFFF),
-                ),
-                child: const Row(
-                  children: [
-                    Center(
-                      child: Text("Stop", style: TextStyle(fontSize: 20)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 20, left: 275),
-                      child: Icon(
-                        Icons.stop,
-                        size: 30,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                ),
-                height: 80,
-                width: 390,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0XFFFFFFFF),
-                ),
-                child: const Row(
-                  children: [
-                    Center(
-                      child: Text("Close", style: TextStyle(fontSize: 20)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 265, right: 20),
-                      child: Icon(
-                        Icons.close,
-                        size: 30,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                ),
-                height: 80,
-                width: 390,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0XFFFFFFFF),
-                ),
-                child: const Row(
-                  children: [
-                    Center(
-                      child: Text(
-                        "Delete",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 260, right: 20),
-                      child: Icon(
-                        Icons.delete,
-                        size: 30,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                padding: const EdgeInsets.only(
-                  left: 20,
-                ),
-                height: 80,
-                width: 390,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color(0XFFFFFFFF),
-                ),
-                child: const Row(
-                  children: [
-                    Center(
-                      child: Text("Email", style: TextStyle(fontSize: 20)),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 265, right: 20),
-                      child: Icon(
-                        Icons.email,
-                        size: 30,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                )
+                .toList(),
           ),
         ),
       ),
