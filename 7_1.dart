@@ -627,3 +627,120 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+
+Task--4
+
+
+  import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(
+        title: 'Dynamic List',
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var Numlist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0XFFFFFFFF),
+        appBar: AppBar(
+          backgroundColor: const Color(0XFF244D61),
+          elevation: 3,
+          title: const Text(
+            'Dynamic List',
+            style: TextStyle(color: Color(0XFFFFFFFF)),
+          ),
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              for (int i in Numlist)
+                Container(
+                  height: 120,
+                  width: double.infinity,
+                  margin: EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      color: i % 2 == 0 ? Color(0xFF75E2FF) : Color(0XFF5689C0)
+                      //  color: Color(0xFF75E2FF),
+                      ),
+                  child: Center(
+                    child: Text(
+                      '$i',
+                      style: TextStyle(color: Colors.white, fontSize: 23),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
+        floatingActionButton: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                setState(
+                  () {
+                    Numlist.add(Numlist.last + 1);
+                  },
+                );
+              },
+              backgroundColor: Color(0XFF244D61),
+              child: const Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                setState(
+                  () {
+                    Numlist.remove(Numlist.last);
+                  },
+                );
+              },
+              backgroundColor: Color(0XFF244D61),
+              child: const Icon(
+                Icons.remove,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
