@@ -744,3 +744,253 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+Task--5
+
+  import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MyHomePage(
+        title: 'Dynamic List',
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+
+  List selectedIcon=[Icons.add];
+  List selectedColor=[Color(0XFFCBCBCB)];
+
+  List ColorList = [
+    Color(0XFFCBCBCB),
+    Color(0XFFD8CCE1),
+    Color(0XFFEEFF41),
+    Color(0XFF2196F3),
+    Color(0XFF448AFF),
+    Color(0XFF3F51B5),
+    Color(0XFFD8CCE1),
+    Color(0XFFCBCBCB),
+  ];
+  List IconList = [
+    Icons.add,
+    Icons.chevron_left_outlined,
+    Icons.chevron_right_outlined,
+    Icons.alarm,
+    Icons.call,
+    Icons.search,
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0XFFEFF1F3),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 3,
+          title: const Text(
+            'Icons Editor',
+            style: TextStyle(color: Color(0XFF000000)),
+          ),
+          centerTitle: true,
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Container(
+                        height: 250,
+                        width: 350,
+                        margin: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFAFAFA),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade400,
+                                spreadRadius: 2.0,
+                                blurRadius: 10,
+                                offset: Offset.zero),
+                          ],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          selectedIcon[0],color: selectedColor[0],size: 80,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: 80,
+                      width: 350,
+                      child: Center(
+                        child: Text(
+                          "Select Color",
+                          style: TextStyle(color: Colors.black,fontSize: 20),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFAFAFA),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade400,
+                              spreadRadius: 2.0,
+                              blurRadius: 10,
+                              offset: Offset.zero),
+                        ],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    Container(
+                      height: 120,
+                      width: 350,
+                      padding: EdgeInsets.only(left: 8, right: 8),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(children: [
+                          for (var i in ColorList)
+                            InkWell(
+                              onTap: (){
+                                // print(i);
+                                setState(() {
+                                  selectedColor[0]=i;
+                                });
+                              },
+                              child: Container(
+                                height: 80,
+                                width: 80,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: i),
+                                margin: EdgeInsets.all(5),
+                              ),
+                            )
+                        ]),
+                      ),
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFAFAFA),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade400,
+                              spreadRadius: 2.0,
+                              blurRadius: 10,
+                              offset: Offset.zero),
+                        ],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    Container(
+                      height: 70,
+                      width: 350,
+                      child: Center(
+                        child: Text(
+                          "Select Icon",
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFAFAFA),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade400,
+                              spreadRadius: 2.0,
+                              blurRadius: 10,
+                              offset: Offset.zero),
+                        ],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    Container(
+                      height: 110,
+                      width: 350,
+                      padding: EdgeInsets.only(left: 8, right: 8),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            for (var i in IconList)
+                              InkWell(
+                                onTap: (){
+                                  setState(() {
+                                    selectedIcon[0]=i;
+                                  });
+                                },
+                                child: Container(
+                                  child: Icon(
+                                    i,
+                                    color: Color(0XFF2196F3),
+                                    size: 30,
+                                  ),
+                                  height: 80,
+                                  width: 80,
+                                  margin: EdgeInsets.all(5),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffFAFAFA),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.grey.shade400,
+                                          spreadRadius: 2.0,
+                                          blurRadius: 10)
+                                    ],
+                                    borderRadius: BorderRadius.circular(15),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                      margin: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFAFAFA),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.shade400,
+                              spreadRadius: 2.0,
+                              blurRadius: 10,
+                              offset: Offset.zero),
+                        ],
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
